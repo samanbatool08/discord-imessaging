@@ -3,11 +3,11 @@ import './Sidebar.css';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
 import SidebarChannel from './SidebarChannel';
+import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
 
 function Sidebar() {
     return (
         <div className='sidebar'>
-            <h2>Sidebarrr</h2>
 
             <div className='sidebar__top'>
                 <h3>Dinner Plans</h3>
@@ -29,8 +29,23 @@ function Sidebar() {
                 <SidebarChannel />
             </div>
         </div>
+         
+         {/* UI purposes only */}
+        <div className='sidebar__voice'>
+            <SignalCellularAltIcon 
+            className='sidebar__voiceIcon'
+            fontSize='large'
+            />
+            <div className='sidebar__voiceInfo'>
+                <h3>Voice Connected</h3>
+                <p>Stream</p>
+            </div>
+        </div>
     </div>
     )
 }
 
 export default Sidebar
+
+
+

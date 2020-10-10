@@ -6,6 +6,7 @@ import SidebarChannel from './SidebarChannel';
 import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import CallIcon from '@material-ui/icons/Call';
+import { Avatar } from '@material-ui/core';
 
 function Sidebar() {
     return (
@@ -46,6 +47,10 @@ function Sidebar() {
                 <InfoOutlinedIcon />
                 <CallIcon />
             </div>
+        </div>
+
+        <div className='sidebar__profile'>
+            <Avatar />
         </div>
     </div>
     )

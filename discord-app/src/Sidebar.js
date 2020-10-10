@@ -51,6 +51,14 @@ function Sidebar() {
 
         <div className='sidebar__profile'>
             <Avatar />
+            <div className='sidebar__profileInfo'>
+                <h3>Saman</h3>
+                <p>Id will go here</p>
+            </div>
+            
+            <div className='sidebar__profileIcons'>
+
+            </div>
         </div>
     </div>
     )

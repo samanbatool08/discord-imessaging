@@ -11,7 +11,6 @@ import HelpRoundedIcon from '@material-ui/icons/HelpRounded';
 function ChatHeader() {
     return (
         <div className='chatHeader'>
-            <h3>I am the chat header</h3>
             <div className='chatHeader__left'>
                 <h3>
                     <span className='chatHeader__hash'>

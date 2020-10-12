@@ -10,8 +10,13 @@ import MicIcon from '@material-ui/icons/Mic';
 import HeadsetIcon from '@material-ui/icons/Headset';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { Avatar } from '@material-ui/core';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
 
 function Sidebar() {
+    const user = useSelector(selectUser);
+    console.log(user)
+
     return (
         <div className='sidebar'>
 
@@ -53,10 +58,10 @@ function Sidebar() {
         </div>
 
         <div className='sidebar__profile'>
-            <Avatar src='https://avatars0.githubusercontent.com/u/56152644?s=460&u=15a0b16837aa00de7f062b08c9eb8ade70820006&v=4' />
+            <Avatar src={user.photo} />
             <div className='sidebar__profileInfo'>
-                <h3>@saman</h3>
-                <p>Id will go here</p>
+            <h3>{user.displayName}</h3>
+            <p>Id will go here</p>
             </div>
 
             <div className='sidebar__profileIcons'>

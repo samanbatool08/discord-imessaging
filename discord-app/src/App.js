@@ -6,6 +6,7 @@ import Chat from './Chat';
 import Login from './Login';
 import { selectUser } from './features/userSlice';
 import { auth } from 'firebase';
+import { login, logout } from './features/userSlice';
 
 function App() {
   const dispatch = useDispatch();
@@ -16,8 +17,17 @@ function App() {
       console.log('user is', authUser)
       if (authUser) {
         // user is logged in
+        dispatch(
+          login({
+          uid: authUser.uid,
+          photo: authUser.photoURL,
+          email: authUser.email,
+          displayName: authUser.displayName,
+        })
+        )
       } else {
         // user is logged out
+        dispatch(logout()); 
       }
     })
   }, [])
